@@ -35,22 +35,22 @@
     </header>
     <main class="bg-[url('/images/background.png')] bg-center bg-no-repeat min-h-screen">
         <!-- Play Now Section:Home Screen -->
-        <div class="flex flex-col justify-center items-center min-h-screen gap-3">
+        <div id="playNowSection"class="flex flex-col justify-center items-center min-h-screen gap-3">
             <h1 class="text-white text-[170px] anton-regular">ALPHABET CLASH</h1>
-            <p class="text-white text-2xl font-medium poppins">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn text-2xl font-bold poppins">Play Now</button>
+            <p class="text-white text-xl font-medium poppins">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button onclick="displayPlayground('playNowSection','playGroundSection')" class="btn text-2xl font-bold poppins">Play Now</button>
         </div>
         <!-- Playground Section -->
-        <div class="flex flex-col justify-center items-center hidden">
+        <div id="playGroundSection"class="flex flex-col justify-center items-center hidden">
             <!-- Playground ArtBoard -->
             <div
-                class="artboard artboard-horizontal phone-6  border-[20px] border-[#010313CC] bg-[#FFFFFFB3] mt-24 flex flex-col">
+                class="artboard artboard-horizontal phone-6  border-[20px] border-[#010313CC] bg-[#FFFFFFB3] mt-24 flex flex-col rounded-2xl">
                 <div class="flex justify-center">
                     <p class="bg-[#2F2941] text-white text-center border-b-8 border-x-8 border-[#2F2941]">Don't watch
                         keyboard while playing...</p>
                 </div>
                 <div class="flex justify-center items-center flex-1">
-                    <h2 class="poppins text-9xl font-bold">Y</h2>
+                    <h2 id="showAlphabet" class="poppins text-9xl font-bold uppercase">Y</h2>
                 </div>
             </div>
             <div class="mt-24">
@@ -93,20 +93,20 @@
                 <div class="bg-purple-600 rounded-full p-4 flex gap-1 justify-center">
                     <p>Life</p>
                     <img src="/images/life.svg" alt="" srcset="">
-                    <p>1</p>
+                    <p id="lifeNumber">5</p>
                 </div>
-                <div class="bg-purple-600 rounded-full p-4 flex justify-center gap-1">
+                <div id="scoreSection"class="bg-purple-600 rounded-full p-4 flex justify-center gap-1">
                     <p>Score</p>
                     <img src="/images/score.svg" alt="">
-                    <p>0</p>
+                    <p id="scoreNumber">0</p>
                 </div>
             </div>
         </div>
         <!-- Final Score Section -->
-        <div class="flex justify-center items-center min-h-screen hidden">
+        <div id="finalScoreSection"class="flex justify-center items-center min-h-screen hidden">
             <div class="bg-purple-800 text-white rounded-2xl p-8 flex flex-col gap-4 justify-center items-center">
-                <h2 class="poppins text-6xl font-bold">Score: <span>14</span></h2>
-                <button class="btn text-2xl poppins font-medium">Play Again</button>
+                <h2 class="poppins text-6xl font-bold">Score: <span id="finalScore">14</span></h2>
+                <button onclick="playAgain('finalScoreSection','playGroundSection')" class="btn text-2xl poppins font-medium">Play Again</button>
                 <p class="text-white">Practice will make you Pro</p>
             </div>
         </div>
